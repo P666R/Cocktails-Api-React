@@ -1,12 +1,12 @@
-import React from "react";
+import { useRef, useEffect } from "react";
 import { useGlobalContext } from "../Context";
 
 const SearchForm = () => {
   const { setSearchTerm } = useGlobalContext();
 
-  const searchValue = React.useRef("");
+  const searchValue = useRef("");
 
-  React.useEffect(() => {
+  useEffect(() => {
     searchValue.current.focus();
   }, []);
 
